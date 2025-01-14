@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/andrealar30/page_404.github.io./static/css/main.320fc95b.css",
+    "main.js": "/andrealar30/page_404.github.io./static/js/main.b425351e.js",
+    "static/js/488.67a3b130.chunk.js": "/andrealar30/page_404.github.io./static/js/488.67a3b130.chunk.js",
+    "index.html": "/andrealar30/page_404.github.io./index.html",
+    "main.320fc95b.css.map": "/andrealar30/page_404.github.io./static/css/main.320fc95b.css.map",
+    "main.b425351e.js.map": "/andrealar30/page_404.github.io./static/js/main.b425351e.js.map",
+    "488.67a3b130.chunk.js.map": "/andrealar30/page_404.github.io./static/js/488.67a3b130.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.320fc95b.css",
+    "static/js/main.b425351e.js"
+  ]
+}
