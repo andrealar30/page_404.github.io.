@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    margin: 0;
+    padding: 0;
+
+    --white: #ffffff;
+    --black: #121212;
+    --blue: #308bd1;
+    --gray: #959695;
+    --red: #ff0000; /* Rojo */
+    --yellow: #ffea00; /* Color amarillo */
+    --orange: #ff8000; 
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-family: "Montserrat", sans-serif;
+    color: var(--white);
+    background: linear-gradient(to bottom, #d3d3d3, #a9a9a9, #696969, #000); /* Gradiente de grises más claro a oscuro */
+}
+
+.error {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin: 0 10px;
+}
+
+.error_gif {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px; /* esquinas redondeadas */
+    animation: falling-gif 1.5s ease-out; /* Aplica la animación de caída */
+}
+
+p:first-of-type {
+    animation: fall 1s linear;
+    transform: rotateZ(-20deg);
+}
+
+p:last-of-type {
+    animation: fall 1.8s linear;
+    transform: rotateZ(8deg);
+}
+
+p:nth-of-type(2) {
+    color: var(--blue);
+    animation: bounce 1.2s 1.8s linear forwards;
+    opacity: 0;
+}
+
+.error_title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    padding: 0 3%;
+}
+
+.error_description {
+    font-size: 1rem;
+    text-align: justify;
+    line-height: 1.6;
+    padding: 0 10%;
+    color: var(--orange);
+}
+
+.action {
+    font: inherit;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.action:hover {
+    opacity: 0.8;
+}
+
+/* Estilo de la palabra OPPS */
+.opps {
+    color: var(--yellow); /* Color inicial de OPPS ahora es amarillo */
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.opps:hover {
+    color: var(--red); /* Cambia el color a rojo cuando el mouse pasa sobre ella */
+}
+
+@media screen and (min-width: 48rem) {
+    .error_description {
+        padding: 0;
+    }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 40%, 75%, 95% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    15% {
+        transform: translateY(-25px);
+    }
+    65% {
+        transform: translateY(-15px);
+    }
+    85% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: rotateZ(45deg);
+        opacity: 1;
+    }
+}
+
+@keyframes falling-gif {
+    0% {
+        transform: translateY(-100vh) rotateZ(-30deg); /* Empieza arriba y girado */
+        opacity: 0; /* Comienza invisible */
+    }
+    60% {
+        transform: translateY(20px) rotateZ(10deg); /* Rebota un poco */
+        opacity: 1; /* Aparece gradualmente */
+    }
+    80% {
+        transform: translateY(-10px) rotateZ(-5deg); /* Rebote inverso */
+    }
+    100% {
+        transform: translateY(0) rotateZ(0); /* Queda en posición final */
+    }
+}
